@@ -37,7 +37,7 @@ gulp.task('scripts', function(){
 //Compiles Sass
 
 gulp.task('styles', function() {
-	gulp.src('scss/**/*.scss')
+	gulp.src('css/**/*.scss')
 	.pipe(sass({
 		style: 'compressed'
 	}))
@@ -63,7 +63,7 @@ gulp.task('image', function() {
 gulp.task('watch', function() {
 	livereload.listen();
 	gulp.watch('js/*.js', ['scripts']);
-	gulp.watch('scss/**/*.scss', ['styles']);
+	gulp.watch('css/**/*.scss', ['styles']);
 	gulp.watch('*.html', ['minify']);
 });
 
